@@ -85,18 +85,30 @@ body {
 .tab {
     display: flex;
 }
+.tab-label {
+    position: relative;
+}
+.tab-label img {
+    display: none;
+    transition: .35s all;
+    transform: rotate(0deg);
+}
+.tab-label.active img {
+    transform: rotate(180deg); 
+}
 .tab > div {
     transition: .35s all;
     cursor: pointer;
     padding: 20px 24px;
     color: var(--color-text-caption);
     background: var(--color-bg-elem);
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
     font-weight: 500;
 }
 .tab > div.active {
     background: var(--color-main-bg);
     color: var(--color-text-active);
+    border-radius: 20px 20px 0 0;
 }
 
 .tab-content {
@@ -232,5 +244,25 @@ body {
     }
     .form-apply {
         justify-content: center;
+    }
+    .tab-content {
+        border-radius: 0 0 20px 20px;
+    }
+    .tab {
+        display: block;
+        position: relative;
+    }
+    .tab-label img {
+        display: block;
+        width: 12px;
+    }
+    .tab-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .tab > div {
+        z-index: 2;
     }
 }
