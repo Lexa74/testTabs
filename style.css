@@ -37,6 +37,7 @@ body {
     font-size: 18px;
     line-height: 27px;
     font-weight: 500;
+    margin-bottom: 20px;
 }
 
 .btn-1 {
@@ -50,6 +51,8 @@ body {
     border: none;
     color: var(--color-main-bg);
     cursor: pointer;
+    justify-content: center;
+    font-size: 16px;
 }
 .btn-1:hover {
     background-color: var(--color-btn-hover);
@@ -127,8 +130,12 @@ body {
     position: relative;
 }
 .tab-content__top-left {
-    left: -60px;
+    left: -130px;
     position: relative;
+    width: 330px;
+}
+.tab-content__top-left img {
+    width: 400px;
 }
 .tab-content .line-in-tabs {
     background-color: var(--color-bg-elem);
@@ -149,6 +156,7 @@ body {
 .charac > div p {
     display: flex;
     align-items: center;
+    margin: 0 0 20px 0;
 }
 .charac > div img {
     margin-right: 16px;
@@ -173,4 +181,56 @@ body {
 .charac-cancel {
     cursor: pointer;
     margin-left: 34px;
+}
+
+
+/*Адаптивность*/
+
+@media screen and (max-width: 800px) {
+    .caption-h1 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .caption-h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .caption-h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    body {
+        font-size: 14px;
+        line-height: 21px;
+        width: 335px;
+    }
+    .tab-content__top {
+        display: block;
+    }
+    .tab-content > div {
+        padding: 30px 20px;
+    }
+    .tab-content__top-left {
+        left: 0;
+        width: 300px;
+    }
+    .tab-content__top-left img {
+        width: 100%;
+    }
+    .charac, .add-charac__form {
+        display: block;
+    }
+    .add-charac__form > * {
+        width: 100%;
+    }
+    .add-charac__input {
+        margin-bottom: 15px;
+    }
+    .btn-1 {
+        font-size: 14px;
+        padding: 15px 40px;
+    }
+    .form-apply {
+        justify-content: center;
+    }
 }
