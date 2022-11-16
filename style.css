@@ -1,0 +1,32 @@
+.tab {
+    display: flex;
+    gap: 15px;
+}
+
+.tab div {
+    transition: .35s all;
+    cursor: pointer;
+}
+
+.tab div.active {
+    border-bottom: 1px solid green;
+}
+
+.tab-content {
+    position: relative;
+    height: 30px;
+}
+
+.tab-content div {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-delay: 0s, .1s;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.tab-content div.active {
+    opacity: 1;
+}
