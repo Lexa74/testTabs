@@ -53,6 +53,7 @@ body {
     cursor: pointer;
     justify-content: center;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 .btn-1:hover {
     background-color: var(--color-btn-hover);
@@ -81,6 +82,9 @@ body {
 .input-1::placeholder {
     color: var(--color-bg-elem)
 }
+.input-1.error {
+    border-color: red;
+}
 
 .tab {
     display: flex;
@@ -102,13 +106,12 @@ body {
     padding: 20px 24px;
     color: var(--color-text-caption);
     background: var(--color-bg-elem);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     font-weight: 500;
 }
 .tab > div.active {
     background: var(--color-main-bg);
     color: var(--color-text-active);
-    border-radius: 20px 20px 0 0;
 }
 
 .tab-content {
@@ -244,9 +247,14 @@ body {
     }
     .form-apply {
         justify-content: center;
+        padding: 30px 20px;
+    }
+    .charac-cancel {
+        padding: 15px 33px;
+        margin: 0;
     }
     .tab-content {
-        border-radius: 0 0 20px 20px;
+        border-radius: 20px;
     }
     .tab {
         display: block;
@@ -264,5 +272,6 @@ body {
     }
     .tab > div {
         z-index: 2;
+        border-radius: 20px;
     }
 }
