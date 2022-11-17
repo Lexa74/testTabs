@@ -5,18 +5,16 @@
 
     tabsCaption.forEach((tabCaption, index) => {
         tabCaption.addEventListener('click', () => {
+            validInput(index)
             if (window.screen.width < 800) {
                 tabsContent[index].classList.toggle('active')
                 tabCaption.classList.toggle('active')
-                validInput(index)
             } else {
                 removeActiveTabs(tabsCaption)
                 removeActiveTabs(tabsContent)
                 tabsContent[index].classList.add('active')
                 tabCaption.classList.add('active')
-                validInput(index)
             }
-            
         })
     })
 
